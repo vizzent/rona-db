@@ -1,0 +1,26 @@
+{
+  "name": "rona/rona-db",
+  "description": "Write a DB with the probabilities for the mobile application RONA",
+  "keywords": ["rona", "ninth", "age"],
+  "homepage": "http://github.com/vizzent/rona-db",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vicent Valls Solbes",
+      "email": "vizzent@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {"RonaDB\\": "src/RonaDB"}
+  },
+  "autoload-dev": {
+    "psr-4": {"RonaDB\\": "tests/RonaDB"}
+  }
+}
