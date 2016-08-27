@@ -28,8 +28,13 @@ class Posibility {
         return $this->getTotal() >= $x;
     }
 
-    private function getTotal()
+    public function getTotal()
     {
         return array_sum($this->arrayValues);
+    }
+
+    public function getValues()
+    {
+        return $this->arrayValues;
     }
 }

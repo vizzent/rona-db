@@ -4,7 +4,7 @@ namespace RonaDB;
 
 use Webmozart\Assert\Assert;
 
-class RollTest  extends \PHPUnit_Framework_TestCase
+class RollTest extends \PHPUnit_Framework_TestCase
 {
     private $roll;
 
@@ -21,8 +21,8 @@ class RollTest  extends \PHPUnit_Framework_TestCase
         $this->roll->addDice();
         $Me7 = $this->roll->getNumberPosibilitiesMajorOrEqualThan(7);
         $total = $this->roll->getTotalNumberPosibilities();
-        Assert::eq($Me7, 0);
-        Assert::eq($total, 6);
+        $this->assertEquals(6, $total);
+        $this->assertEquals(0, $Me7);
     }
 
     /**
@@ -34,8 +34,8 @@ class RollTest  extends \PHPUnit_Framework_TestCase
         $this->roll->addDice();
         $Me7 = $this->roll->getNumberPosibilitiesMajorOrEqualThan(7);
         $total = $this->roll->getTotalNumberPosibilities();
-        Assert::eq($total, 36);
-        Assert::eq($Me7, 21);
+        $this->assertEquals(36, $total);
+        $this->assertEquals(21, $Me7);
     }
 
     /**
@@ -48,17 +48,7 @@ class RollTest  extends \PHPUnit_Framework_TestCase
         $this->roll->addDice();
         $Me7 = $this->roll->getNumberPosibilitiesMajorOrEqualThan(7);
         $total = $this->roll->getTotalNumberPosibilities();
-        Assert::eq($total, 6**3);
-        Assert::eq($Me7, 196);
-        //var_dump($this->roll);
+        $this->assertEquals(6**3, $total);
+        $this->assertEquals(196, $Me7);
     }
-
-    /**
-     *
-    public function testGetRollsPosibilitiesFourthDice()
-    {
-        $this->roll->addDice();
-        //var_dump($this->roll);
-    }
-*/
 }
